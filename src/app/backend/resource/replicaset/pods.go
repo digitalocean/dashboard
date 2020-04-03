@@ -15,6 +15,7 @@
 package replicaset
 
 import (
+	"context"
 	"log"
 
 	"github.com/kubernetes/dashboard/src/app/backend/errors"
@@ -52,7 +53,7 @@ func GetReplicaSetPods(client k8sClient.Interface, metricClient metricapi.Metric
 }
 
 func getRawReplicaSetPods(client k8sClient.Interface, petSetName, namespace string) ([]v1.Pod, error) {
-	rs, err := client.AppsV1().ReplicaSets(namespace).Get(petSetName, metaV1.GetOptions{})
+	rs, err := client.AppsV1().ReplicaSets(namespace).Get(context.TODO(), petSetName, metaV1.GetOptions{})
 	if err != nil {
 		return nil, err
 	}
