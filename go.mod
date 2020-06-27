@@ -13,7 +13,7 @@ require (
 	github.com/igm/sockjs-go v2.0.1+incompatible // indirect
 	github.com/imdario/mergo v0.3.6 // indirect
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
-	github.com/prometheus/client_golang v1.0.0
+	github.com/prometheus/client_golang v1.5.1
 	github.com/spf13/pflag v1.0.5
 	golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
 	golang.org/x/text v0.3.2
